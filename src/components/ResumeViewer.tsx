@@ -1,83 +1,59 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { FileText, Download } from "lucide-react";
+import { FileText, Eye, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ResumeViewer = () => {
-  // Automatically adapts to GitHub Pages base URL (mothieramportfolio)
   const resumePath = `${import.meta.env.BASE_URL}Mothieram_resume.pdf`;
 
   return (
-    <section id="resume" className="py-20 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float [animation-delay:1.5s]" />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-glow">
-          Resume
+    <section id="resume" className="py-24 bg-gradient-to-b from-background to-background/90">
+      <div className="container mx-auto px-4 text-center">
+        {/* Heading */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          My Resume
         </h2>
-        <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-          View my complete professional experience, education, and skills
+        <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
+          A quick look at my professional background, education, and experience.
         </p>
 
-        <div className="max-w-5xl mx-auto">
-          <Card className="glass-card hover-glow-primary border-primary/30 overflow-hidden">
-            <CardContent className="p-0">
-              {/* Resume Header */}
-              <div className="bg-gradient-accent p-4 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="flex items-center gap-3 md:gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-background/20 flex items-center justify-center flex-shrink-0">
-                    <FileText className="text-foreground" size={20} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg md:text-xl font-bold text-foreground">
-                      Mothieram_resume.pdf
-                    </h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">
-                      Professional Resume
-                    </p>
-                  </div>
-                </div>
-                <Button
-                  asChild
-                  size="sm"
-                  className="glass-card text-primary hover-glow-primary border-primary/30 w-full sm:w-auto"
-                >
-                  <a href={resumePath} download>
-                    <Download className="mr-2" size={16} />
-                    Download PDF
-                  </a>
-                </Button>
+        {/* Resume Card */}
+        <div className="mx-auto max-w-5xl bg-background/40 backdrop-blur-xl rounded-2xl shadow-lg border border-border/50 overflow-hidden transition-transform duration-300 hover:scale-[1.01]">
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 p-6 border-b border-border/50">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <FileText className="text-primary" size={24} />
               </div>
+              <div className="text-left">
+                <h3 className="font-semibold text-lg">Mothieram_resume.pdf</h3>
+                <p className="text-sm text-muted-foreground">Professional Resume</p>
+              </div>
+            </div>
 
-              {/* Resume Preview */}
-              <div
-                className="relative w-full bg-background/30"
-                style={{ height: "800px" }}
-              >
-                <iframe
-                  src={resumePath}
-                  className="w-full h-full"
-                  title="Resume Preview"
-                  style={{ border: "none" }}
-                />
-              </div>
+            <div className="flex gap-3">
+              <Button asChild variant="outline" className="border-primary/40 hover:bg-primary/10">
+                <a href={resumePath} target="_blank" rel="noopener noreferrer">
+                  <Eye className="mr-2" size={16} />
+                  View
+                </a>
+              </Button>
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white">
+                <a href={resumePath} download>
+                  <Download className="mr-2" size={16} />
+                  Download
+                </a>
+              </Button>
+            </div>
+          </div>
 
-              {/* Mobile Download Button */}
-              <div className="md:hidden p-4 text-center border-t border-border bg-background/50">
-                <Button
-                  asChild
-                  size="lg"
-                  className="glass-card text-primary hover-glow-primary border-primary/30 w-full"
-                >
-                  <a href={resumePath} download>
-                    <Download className="mr-2" size={18} />
-                    Download Resume
-                  </a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Resume Preview */}
+          <div className="relative bg-background">
+            <iframe
+              src={resumePath}
+              className="w-full h-[900px]"
+              title="Resume Preview"
+              style={{ border: "none" }}
+            />
+          </div>
         </div>
       </div>
     </section>
