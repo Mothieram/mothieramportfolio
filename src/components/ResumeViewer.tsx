@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const ResumeViewer = () => {
   const resumePath = `${import.meta.env.BASE_URL}Mothieram_resume.pdf`;
+  const previewPath = `${import.meta.env.BASE_URL}resume_preview.png`;
 
   return (
     <section id="resume" className="py-24 bg-gradient-to-b from-background to-background/90">
@@ -29,11 +30,11 @@ const ResumeViewer = () => {
               </p>
             </div>
 
-            {/* Preview Image (optional placeholder or your resume cover image) */}
+            {/* ✅ Real Preview Image */}
             <img
-              src={`${import.meta.env.BASE_URL}resume_preview.svg`}
+              src={previewPath}
               alt="Resume Preview"
-              className="rounded-lg border border-border/30 shadow-sm max-w-xs w-full"
+              className="rounded-lg border border-border/30 shadow-md max-w-sm w-full transition-transform duration-300 hover:scale-[1.02]"
             />
 
             {/* Buttons */}
