@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 217 51% 14%;
+    --foreground: 220 13% 91%;
+
+    --card: 217 51% 16%;
+    --card-foreground: 220 13% 91%;
+
+    --popover: 217 51% 16%;
+    --popover-foreground: 220 13% 91%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 217 51% 14%;
+
+    --secondary: 187 85% 53%;
+    --secondary-foreground: 217 51% 14%;
+
+    --muted: 217 40% 22%;
+    --muted-foreground: 220 13% 70%;
+
+    --accent: 271 91% 65%;
+    --accent-foreground: 217 51% 14%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 220 13% 91%;
+
+    --border: 217 40% 25%;
+    --input: 217 40% 25%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* AI/Data Aesthetic tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(217 51% 14%), hsl(217 51% 20%), hsl(217 91% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%), hsl(187 85% 53%));
+    --gradient-purple: linear-gradient(135deg, hsl(271 91% 65%), hsl(271 91% 75%));
+    --gradient-glass: linear-gradient(135deg, hsl(217 40% 25% / 0.4), hsl(217 40% 30% / 0.2));
+    
+    --glow-primary: 0 0 20px hsl(217 91% 60% / 0.5), 0 0 40px hsl(217 91% 60% / 0.3);
+    --glow-secondary: 0 0 20px hsl(187 85% 53% / 0.5), 0 0 40px hsl(187 85% 53% / 0.3);
+    --glow-accent: 0 0 20px hsl(271 91% 65% / 0.5), 0 0 40px hsl(271 91% 65% / 0.3);
+    
+    --shadow-soft: 0 4px 20px -2px hsl(217 91% 60% / 0.1);
+    --shadow-medium: 0 8px 30px -4px hsl(217 91% 60% / 0.2);
+    --shadow-strong: 0 16px 40px -8px hsl(217 91% 60% / 0.3);
+    --shadow-glow: 0 0 60px hsl(217 91% 60% / 0.4);
+    
+    --glass-bg: hsl(217 40% 25% / 0.1);
+    --glass-border: hsl(220 13% 91% / 0.1);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(at 0% 0%, hsl(217 91% 20% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(271 91% 35% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsl(187 85% 30% / 0.15) 0px, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .glass-card {
+    background: linear-gradient(135deg, hsl(217 40% 25% / 0.3), hsl(217 40% 30% / 0.1));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(220 13% 91% / 0.1);
+  }
+  
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  
+  .hover-glow-primary {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow-primary:hover {
+    box-shadow: var(--glow-primary);
+    transform: translateY(-4px) scale(1.02);
+  }
+  
+  .hover-glow-secondary:hover {
+    box-shadow: var(--glow-secondary);
+    transform: translateY(-4px) scale(1.02);
+  }
+  
+  .hover-glow-accent:hover {
+    box-shadow: var(--glow-accent);
+    transform: translateY(-4px) scale(1.02);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 30px currentColor, 0 0 60px currentColor;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .hover-text-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-text-glow:hover {
+    text-shadow: 0 0 20px currentColor;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      text-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+    }
+    50% {
+      text-shadow: 0 0 30px currentColor, 0 0 60px currentColor;
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.6s ease-out;
+  }
+}
