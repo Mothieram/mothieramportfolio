@@ -31,7 +31,7 @@ const ResumeViewer = () => {
 
             {/* Preview Image (optional placeholder or your resume cover image) */}
             <img
-              src={`${import.meta.env.BASE_URL}placeholder.svg`}
+              src={`${import.meta.env.BASE_URL}resume_preview.svg`}
               alt="Resume Preview"
               className="rounded-lg border border-border/30 shadow-sm max-w-xs w-full"
             />
