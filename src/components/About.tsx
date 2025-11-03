@@ -37,11 +37,11 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-12 md:mb-16 max-w-5xl mx-auto animate-slide-up">
           <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 flex-shrink-0">
             <div className="relative w-full h-full group">
-              <div className="absolute inset-0 bg-gradient-accent rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-glow-pulse" />
+              <div className="absolute inset-0 bg-gradient-accent rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-glow-pulse" />
               <img
                 src={profileImg}
                 alt="Mothieram L.N - Data Science & ML Engineer"
-                className="relative w-full h-full object-cover object-centre rounded-full glass-card border-4 border-primary/40 hover:border-primary/80 transition-all duration-500 hover:scale-105"
+                className="relative w-full h-full object-cover rounded-2xl glass-card border-2 border-primary/30 hover:border-primary/60 transition-all duration-500 hover:scale-105"
               />
             </div>
           </div>
