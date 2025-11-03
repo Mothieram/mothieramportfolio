@@ -2,7 +2,7 @@ import { FileText, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ResumeViewer = () => {
-  const resumePath = `${import.meta.env.BASE_URL}Mothieram_resume.pdf`;
+  const resumePath = `${import.meta.env.BASE_URL}Mothieramresume.pdf`;
   const previewPath = `${import.meta.env.BASE_URL}resume_preview.png`;
 
   return (
