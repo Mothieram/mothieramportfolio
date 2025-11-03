@@ -3,6 +3,9 @@ import { FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ResumeViewer = () => {
+  // Automatically adapts to GitHub Pages base URL (mothieramportfolio)
+  const resumePath = `${import.meta.env.BASE_URL}Mothieram_resume.pdf`;
+
   return (
     <section id="resume" className="py-20 relative overflow-hidden">
       {/* Background decorations */}
@@ -27,8 +30,12 @@ const ResumeViewer = () => {
                     <FileText className="text-foreground" size={20} />
                   </div>
                   <div>
-                    <h3 className="text-lg md:text-xl font-bold text-foreground">Mothieram_resume.pdf</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">Professional Resume</p>
+                    <h3 className="text-lg md:text-xl font-bold text-foreground">
+                      Mothieram_resume.pdf
+                    </h3>
+                    <p className="text-xs md:text-sm text-muted-foreground">
+                      Professional Resume
+                    </p>
                   </div>
                 </div>
                 <Button
@@ -36,31 +43,34 @@ const ResumeViewer = () => {
                   size="sm"
                   className="glass-card text-primary hover-glow-primary border-primary/30 w-full sm:w-auto"
                 >
-                  <a href="/Mothieram_resume.pdf" download>
+                  <a href={resumePath} download>
                     <Download className="mr-2" size={16} />
                     Download PDF
                   </a>
                 </Button>
               </div>
 
-              {/* Resume Preview - Works on all devices */}
-              <div className="relative w-full bg-background/30" style={{ height: "800px" }}>
+              {/* Resume Preview */}
+              <div
+                className="relative w-full bg-background/30"
+                style={{ height: "800px" }}
+              >
                 <iframe
-                  src="/Mothieram_resume.pdf"
+                  src={resumePath}
                   className="w-full h-full"
                   title="Resume Preview"
                   style={{ border: "none" }}
                 />
               </div>
 
-              {/* Additional download button for mobile */}
+              {/* Mobile Download Button */}
               <div className="md:hidden p-4 text-center border-t border-border bg-background/50">
                 <Button
                   asChild
                   size="lg"
                   className="glass-card text-primary hover-glow-primary border-primary/30 w-full"
                 >
-                  <a href="/Mothieram_resume.pdf" download>
+                  <a href={resumePath} download>
                     <Download className="mr-2" size={18} />
                     Download Resume
                   </a>
