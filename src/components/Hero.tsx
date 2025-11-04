@@ -30,38 +30,38 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in">
+      <div className="container mx-auto px-4 sm:px-6 z-10 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6 animate-fade-in">
           <span className="text-glow block mb-2">Mothieram L.N</span>
-          <span className="bg-gradient-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <span className="bg-gradient-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
             Data Science & ML Engineer
           </span>
         </h1>
-        <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in [animation-delay:0.2s] opacity-0 [animation-fill-mode:forwards] px-4">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 animate-fade-in [animation-delay:0.2s] opacity-0 [animation-fill-mode:forwards] px-2 sm:px-4">
           Building intelligent systems with NLP, Machine Learning, and modern web technologies.
           Experienced in developing end-to-end ML pipelines and deploying production-ready models.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-fade-in [animation-delay:0.4s] opacity-0 [animation-fill-mode:forwards] px-4">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in [animation-delay:0.4s] opacity-0 [animation-fill-mode:forwards] px-2 sm:px-4 max-w-3xl mx-auto">
           <Button
             size="lg"
             onClick={() => scrollToSection("projects")}
-            className="glass-card text-foreground hover-glow-primary border-primary/30 w-full sm:w-auto min-h-[52px] active:scale-95 transition-transform"
+            className="glass-card text-foreground hover-glow-primary border-primary/30 w-full sm:w-auto min-h-[52px] px-6 text-base font-medium active:scale-95 transition-transform"
           >
             View My Work
           </Button>
           <Button
             size="lg"
             onClick={() => scrollToSection("contact")}
-            className="glass-card text-foreground hover-glow-secondary border-secondary/30 w-full sm:w-auto min-h-[52px] active:scale-95 transition-transform"
+            className="glass-card text-foreground hover-glow-secondary border-secondary/30 w-full sm:w-auto min-h-[52px] px-6 text-base font-medium active:scale-95 transition-transform"
           >
             Get In Touch
           </Button>
           <Button
             size="lg"
             asChild
-            className="glass-card text-foreground hover-glow-accent border-accent/30 w-full sm:w-auto min-h-[52px]"
+            className="glass-card text-foreground hover-glow-accent border-accent/30 w-full sm:w-auto min-h-[52px] px-6 text-base font-medium"
           >
-            <a href="/Mothieram resume.pdf" download className="active:scale-95 transition-transform inline-flex items-center justify-center">
+            <a href={`${import.meta.env.BASE_URL}Mothieram resume.pdf`} download className="active:scale-95 transition-transform inline-flex items-center justify-center">
               Download Resume
             </a>
           </Button>

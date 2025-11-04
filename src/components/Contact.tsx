@@ -27,11 +27,11 @@ const Contact = () => {
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-secondary/30 rounded-full blur-3xl" />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-foreground">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 sm:mb-6 text-foreground">
           Get In Touch
         </h2>
-        <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-8 sm:mb-12 px-2">
           Have a project in mind or want to collaborate? I'd love to hear from you.
           Drop me a message and let's create something amazing together.
         </p>
@@ -91,7 +91,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-accent text-white hover-glow-secondary transition-all min-h-[52px] text-base active:scale-[0.98]"
+                  className="w-full bg-gradient-accent text-white hover-glow-secondary transition-all min-h-[52px] text-base font-medium active:scale-[0.98]"
                 >
                   Send Message
                 </Button>

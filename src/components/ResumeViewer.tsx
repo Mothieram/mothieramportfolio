@@ -7,25 +7,25 @@ const ResumeViewer = () => {
 
   return (
     <section id="resume" className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-background to-background/90">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 sm:px-6 text-center">
         {/* Section Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
           My Resume
         </h2>
-        <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-10 max-w-2xl mx-auto px-4">
+        <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-10 max-w-2xl mx-auto px-2">
           Explore my professional experience, technical expertise, and recent projects.
         </p>
 
         {/* Resume Card */}
-        <div className="mx-auto max-w-lg bg-background/40 backdrop-blur-xl rounded-2xl shadow-lg border border-border/50 p-6 sm:p-8 transition-transform duration-300 hover:scale-[1.01] active:scale-[0.99]">
-          <div className="flex flex-col items-center space-y-4 sm:space-y-6">
+        <div className="mx-auto max-w-lg bg-background/40 backdrop-blur-xl rounded-2xl shadow-lg border border-border/50 p-4 sm:p-6 md:p-8 transition-transform duration-300 hover:scale-[1.01] active:scale-[0.99]">
+          <div className="flex flex-col items-center space-y-4 sm:space-y-5">
             {/* Icon + Title */}
             <div className="flex flex-col items-center">
               <div className="p-3 sm:p-4 bg-primary/10 rounded-xl mb-3">
-                <FileText className="text-primary" size={36} />
+                <FileText className="text-primary" size={32} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold px-4">Mothieram_resume.pdf</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground px-4">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold px-2">Mothieram_resume.pdf</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground px-2">
                 Updated portfolio resume with experience and skills.
               </p>
             </div>
@@ -38,11 +38,11 @@ const ResumeViewer = () => {
             />
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 mt-4 w-full sm:w-auto">
               <Button
                 asChild
                 variant="outline"
-                className="border-primary/40 hover:bg-primary/10 w-full sm:w-auto min-h-[48px] active:scale-95 transition-transform"
+                className="border-primary/40 hover:bg-primary/10 w-full sm:w-auto min-h-[52px] px-6 text-base font-medium active:scale-95 transition-transform"
               >
                 <a href={resumePath} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
                   <ExternalLink className="mr-2" size={18} />
@@ -52,7 +52,7 @@ const ResumeViewer = () => {
 
               <Button
                 asChild
-                className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto min-h-[48px] active:scale-95 transition-transform"
+                className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto min-h-[52px] px-6 text-base font-medium active:scale-95 transition-transform"
               >
                 <a href={resumePath} download className="inline-flex items-center justify-center">
                   <Download className="mr-2" size={18} />
