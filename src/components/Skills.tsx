@@ -57,27 +57,27 @@ const Skills = () => {
           Specialized in Machine Learning, NLP, and full-stack development with a focus on building intelligent, scalable solutions.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="glass-card rounded-lg p-6 hover-glow-primary transition-all duration-300"
+              className="glass-card rounded-lg p-4 sm:p-6 hover-glow-primary transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold mb-4 text-primary border-b border-primary/30 pb-2">
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 text-primary border-b border-primary/30 pb-2">
                 {category.category}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="flex items-center gap-2 px-3 py-2 glass border-secondary/30 rounded-md hover:border-secondary hover:glow-secondary transition-all cursor-default group"
+                    className="flex items-center gap-2 px-3 py-2.5 sm:py-2 glass border-secondary/30 rounded-md hover:border-secondary hover:glow-secondary transition-all cursor-default group min-h-[44px] active:scale-95"
                   >
                     <img 
                       src={skill.icon} 
                       alt={`${skill.name} logo`}
-                      className="w-5 h-5 group-hover:scale-110 transition-transform"
+                      className="w-5 h-5 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform flex-shrink-0"
                     />
-                    <span className="text-sm text-foreground group-hover:text-secondary transition-colors">
+                    <span className="text-sm sm:text-sm text-foreground group-hover:text-secondary transition-colors">
                       {skill.name}
                     </span>
                   </div>

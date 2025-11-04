@@ -45,23 +45,23 @@ const Hero = () => {
           <Button
             size="lg"
             onClick={() => scrollToSection("projects")}
-            className="glass-card text-foreground hover-glow-primary border-primary/30 w-full sm:w-auto"
+            className="glass-card text-foreground hover-glow-primary border-primary/30 w-full sm:w-auto min-h-[52px] active:scale-95 transition-transform"
           >
             View My Work
           </Button>
           <Button
             size="lg"
             onClick={() => scrollToSection("contact")}
-            className="glass-card text-foreground hover-glow-secondary border-secondary/30 w-full sm:w-auto"
+            className="glass-card text-foreground hover-glow-secondary border-secondary/30 w-full sm:w-auto min-h-[52px] active:scale-95 transition-transform"
           >
             Get In Touch
           </Button>
           <Button
             size="lg"
             asChild
-            className="glass-card text-foreground hover-glow-accent border-accent/30 w-full sm:w-auto"
+            className="glass-card text-foreground hover-glow-accent border-accent/30 w-full sm:w-auto min-h-[52px]"
           >
-            <a href="/Mothieram_resume.pdf" download>
+            <a href="/Mothieram resume.pdf" download className="active:scale-95 transition-transform inline-flex items-center justify-center">
               Download Resume
             </a>
           </Button>

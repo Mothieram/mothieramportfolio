@@ -58,9 +58,9 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
               <a
-                href="/Mothieram_resume.pdf"
+                href="/Mothieram resume.pdf"
                 download
-                className="glass-card px-5 py-2.5 md:px-6 md:py-3 rounded-lg text-sm md:text-base text-primary border border-primary/30 hover:border-primary hover-glow-primary transition-all duration-300"
+                className="glass-card px-5 py-3 md:px-6 md:py-3 rounded-lg text-sm md:text-base text-primary border border-primary/30 hover:border-primary hover-glow-primary transition-all duration-300 min-h-[48px] flex items-center justify-center active:scale-95"
               >
                 Download Resume
               </a>
@@ -68,7 +68,7 @@ const About = () => {
                 href="https://github.com/mothieram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-card px-5 py-2.5 md:px-6 md:py-3 rounded-lg text-sm md:text-base text-secondary border border-secondary/30 hover:border-secondary hover-glow-secondary transition-all duration-300"
+                className="glass-card px-5 py-3 md:px-6 md:py-3 rounded-lg text-sm md:text-base text-secondary border border-secondary/30 hover:border-secondary hover-glow-secondary transition-all duration-300 min-h-[48px] flex items-center justify-center active:scale-95"
               >
                 View GitHub
               </a>

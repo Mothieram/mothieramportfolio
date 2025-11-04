@@ -41,36 +41,36 @@ const Projects = () => {
           Machine learning and NLP projects demonstrating expertise in building intelligent systems and data-driven solutions.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="glass-card border-primary/20 hover-glow-accent transition-all duration-300 hover:-translate-y-2 overflow-hidden group"
+              className="glass-card border-primary/20 hover-glow-accent transition-all duration-300 hover:-translate-y-2 active:scale-[0.98] overflow-hidden group"
             >
               <div className={`h-1 bg-gradient-to-r ${project.color}`} />
-              <CardHeader>
-                <CardTitle className="text-2xl text-foreground group-hover:text-secondary group-hover:text-glow transition-all">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-xl sm:text-2xl text-foreground group-hover:text-secondary group-hover:text-glow transition-all">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-base">
+                <CardDescription className="text-sm sm:text-base">
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 sm:p-6 pt-0">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-xs px-3 py-1 rounded-full glass border-accent/30 text-accent"
+                      className="text-xs px-3 py-1.5 rounded-full glass border-accent/30 text-accent"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <Button size="sm" className="gap-2 glass-card border-primary/30 hover-glow-primary" asChild>
+                  <Button size="sm" className="gap-2 glass-card border-primary/30 hover-glow-primary min-h-[44px] px-4" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github size={16} />
+                      <Github size={18} />
                       View on GitHub
                     </a>
                   </Button>
