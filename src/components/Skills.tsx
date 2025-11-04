@@ -49,35 +49,35 @@ const Skills = () => {
           backgroundSize: '50px 50px'
         }} />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-foreground">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 sm:mb-6 text-foreground">
           Skills & Technologies
         </h2>
-        <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-8 sm:mb-12 px-2">
           Specialized in Machine Learning, NLP, and full-stack development with a focus on building intelligent, scalable solutions.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="glass-card rounded-lg p-6 hover-glow-primary transition-all duration-300"
+              className="glass-card rounded-lg p-4 sm:p-5 md:p-6 hover-glow-primary transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold mb-4 text-primary border-b border-primary/30 pb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-primary border-b border-primary/30 pb-2">
                 {category.category}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="flex items-center gap-2 px-3 py-2 glass border-secondary/30 rounded-md hover:border-secondary hover:glow-secondary transition-all cursor-default group"
+                    className="flex items-center gap-2 px-3 py-2.5 glass border-secondary/30 rounded-md hover:border-secondary hover:glow-secondary transition-all cursor-default group min-h-[44px] active:scale-95"
                   >
-                    <img 
-                      src={skill.icon} 
+                    <img
+                      src={skill.icon}
                       alt={`${skill.name} logo`}
-                      className="w-5 h-5 group-hover:scale-110 transition-transform"
+                      className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform flex-shrink-0"
                     />
-                    <span className="text-sm text-foreground group-hover:text-secondary transition-colors">
+                    <span className="text-xs sm:text-sm text-foreground group-hover:text-secondary transition-colors">
                       {skill.name}
                     </span>
                   </div>

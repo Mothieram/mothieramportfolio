@@ -34,8 +34,8 @@ const About = () => {
         </h2>
         
         {/* Profile Section */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-12 md:mb-16 max-w-5xl mx-auto animate-slide-up">
-          <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 flex-shrink-0">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12 md:mb-16 max-w-5xl mx-auto animate-slide-up">
+          <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex-shrink-0">
             <div className="relative w-full h-full group">
               <div className="absolute inset-0 bg-gradient-accent rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-glow-pulse" />
               <img
@@ -46,21 +46,21 @@ const About = () => {
             </div>
           </div>
           
-          <div className="flex-1 text-center md:text-left px-4">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 bg-gradient-accent bg-clip-text text-transparent animate-scale-in">
+          <div className="flex-1 text-center md:text-left px-2">
+            <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 bg-gradient-accent bg-clip-text text-transparent animate-scale-in">
               Data Science & ML Engineer
             </h3>
-            <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-5 md:mb-6 leading-relaxed">
               Data Science and Machine Learning enthusiast with hands-on experience developing and deploying NLP models 
               using Python, PyTorch, and Hugging Face. Proven ability to contribute to the end-to-end product lifecycle, 
               with successful projects in insurance fraud detection and LLM-based query engines. Passionate about applying 
               machine learning to solve real-world problems.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center md:justify-start">
               <a
-                href="/Mothieram_resume.pdf"
+                href={`${import.meta.env.BASE_URL}Mothieram resume.pdf`}
                 download
-                className="glass-card px-5 py-2.5 md:px-6 md:py-3 rounded-lg text-sm md:text-base text-primary border border-primary/30 hover:border-primary hover-glow-primary transition-all duration-300"
+                className="glass-card px-6 py-3.5 rounded-lg text-base text-primary border border-primary/30 hover:border-primary hover-glow-primary transition-all duration-300 min-h-[52px] flex items-center justify-center active:scale-95 font-medium"
               >
                 Download Resume
               </a>
@@ -68,7 +68,7 @@ const About = () => {
                 href="https://github.com/mothieram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-card px-5 py-2.5 md:px-6 md:py-3 rounded-lg text-sm md:text-base text-secondary border border-secondary/30 hover:border-secondary hover-glow-secondary transition-all duration-300"
+                className="glass-card px-6 py-3.5 rounded-lg text-base text-secondary border border-secondary/30 hover:border-secondary hover-glow-secondary transition-all duration-300 min-h-[52px] flex items-center justify-center active:scale-95 font-medium"
               >
                 View GitHub
               </a>

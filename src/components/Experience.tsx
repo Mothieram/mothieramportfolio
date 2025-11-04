@@ -33,48 +33,48 @@ const Experience = () => {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/30 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/30 rounded-full blur-3xl animate-float [animation-delay:1.5s]" />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-foreground">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 sm:mb-6 text-foreground">
           Work Experience
         </h2>
-        <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-8 sm:mb-12 px-2">
           Professional experience in machine learning, NLP, and full-stack development across innovative startups.
         </p>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-5 sm:space-y-6 md:space-y-8">
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="glass-card border-primary/20 hover-glow-primary transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              className="glass-card border-primary/20 hover-glow-primary transition-all duration-300 hover:-translate-y-1 active:scale-[0.99] overflow-hidden"
             >
               <div className="h-1 bg-gradient-accent" />
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-accent glow-primary">
-                      <Briefcase className="text-white" size={24} />
+              <CardHeader className="p-4 sm:p-5 md:p-6">
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  <div className="flex items-start gap-2.5 sm:gap-3">
+                    <div className="p-2 rounded-lg bg-gradient-accent glow-primary flex-shrink-0">
+                      <Briefcase className="text-white" size={18} />
                     </div>
-                    <div>
-                      <CardTitle className="text-2xl text-foreground">{exp.role}</CardTitle>
-                      <p className="text-lg font-semibold bg-gradient-accent bg-clip-text text-transparent">{exp.company}</p>
+                    <div className="flex-1 min-w-0">
+                      <CardTitle className="text-lg sm:text-xl md:text-2xl text-foreground leading-tight">{exp.role}</CardTitle>
+                      <p className="text-sm sm:text-base md:text-lg font-semibold bg-gradient-accent bg-clip-text text-transparent mt-1">{exp.company}</p>
                     </div>
                   </div>
-                  <div className="flex flex-col md:items-end gap-1">
+                  <div className="flex flex-wrap items-center gap-3">
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <Calendar size={16} />
                       <span className="text-sm font-medium">{exp.duration}</span>
                     </div>
-                    <span className="text-xs glass border-secondary/30 px-3 py-1 rounded-full text-secondary">
+                    <span className="text-xs glass border-secondary/30 px-3 py-1.5 rounded-full text-secondary">
                       {exp.type}
                     </span>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
+              <CardContent className="p-4 sm:p-5 md:p-6 pt-0">
+                <ul className="space-y-2.5 sm:space-y-3">
                   {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="flex gap-3 text-muted-foreground">
-                      <span className="text-secondary mt-1.5 flex-shrink-0">▪</span>
+                    <li key={achIndex} className="flex gap-2.5 sm:gap-3 text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
+                      <span className="text-secondary mt-1 flex-shrink-0">▪</span>
                       <span>{achievement}</span>
                     </li>
                   ))}

@@ -37,22 +37,22 @@ const Navigation = () => {
         isScrolled ? "glass shadow-medium" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent hover:text-glow transition-all"
+            className="text-lg sm:text-xl font-bold bg-gradient-accent bg-clip-text text-transparent hover:text-glow transition-all min-h-[44px] flex items-center"
           >
             Portfolio
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-foreground hover:text-secondary transition-all hover:text-glow"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-all hover:text-glow px-2 py-2 min-h-[44px]"
               >
                 {item.label}
               </button>
@@ -63,21 +63,23 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden min-w-[44px] min-h-[44px]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            {navItems.map((item) => (
+          <div className="md:hidden mt-2 pb-2 animate-fade-in glass-card rounded-lg overflow-hidden">
+            {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 text-sm font-medium text-foreground hover:text-accent transition-colors"
+                className={`block w-full text-left px-6 py-4 min-h-[56px] text-base font-medium text-foreground hover:text-secondary hover:bg-primary/10 transition-all active:bg-primary/20 ${
+                  index !== navItems.length - 1 ? 'border-b border-border/50' : ''
+                }`}
               >
                 {item.label}
               </button>
