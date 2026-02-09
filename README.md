@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
 
-## Project info
+# Project Overview
 
-**URL**: https://lovable.dev/projects/f0030a26-3b71-4806-96c4-684e75b6025b
+## Application Details
 
-## How can I edit this code?
+This project is a modern web application developed as part of my personal portfolio. It demonstrates clean UI design, scalable frontend architecture, and efficient development workflows.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Editing and Maintaining the Codebase
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f0030a26-3b71-4806-96c4-684e75b6025b) and start prompting.
+You can modify and extend this application using any of the following methods:
 
-Changes made via Lovable will be committed automatically to this repo.
+### 1. Local Development (Recommended)
 
-**Use your preferred IDE**
+You can work on the project locally using your preferred IDE.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* Node.js (v18+ recommended)
+* npm
+* Git
 
-Follow these steps:
+#### Setup Instructions
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will run with hot reloading enabled for faster development and instant previews.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+### 2. Direct GitHub Editing
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+* Open the repository on GitHub.
+* Navigate to the file you want to modify.
+* Click the **Edit (✏️)** icon.
+* Commit changes directly to the repository.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+### 3. GitHub Codespaces
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+* Open the repository on GitHub.
+* Click **Code → Codespaces → New Codespace**.
+* Edit and run the project directly in the browser.
+* Commit and push changes once complete.
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/f0030a26-3b71-4806-96c4-684e75b6025b) and click on Share -> Publish.
+## Tech Stack
 
-## Can I connect a custom domain to my Lovable project?
+This project is built using modern, production-ready technologies:
 
-Yes, you can!
+* **Vite** – Fast build tooling
+* **TypeScript** – Type-safe development
+* **React** – Component-based UI
+* **shadcn/ui** – Accessible, reusable UI components
+* **Tailwind CSS** – Utility-first styling
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Deployment
+
+The application is production-ready and can be deployed on any modern frontend hosting platform such as:
+
+* Vercel
+* Netlify
+* Cloudflare Pages
+
+Build command:
+
+```sh
+npm run build
+```
+
+---
+
+## Custom Domain Support
+
+The project supports deployment with a custom domain, allowing it to be used as a professional portfolio or production application.
+
+---
+
+## Purpose
+
+This project was developed to showcase:
+
+* Frontend engineering skills
+* Clean UI/UX implementation
+* Scalable project structure
+* Modern React + TypeScript best practices
+
+---
+
+If you want, I can also:
+
+* Convert this into **README.md format**
+* Add **screenshots section**
+* Add **features & architecture section**
+* Optimize it for **recruiters / clients**
+
+Just tell me.
